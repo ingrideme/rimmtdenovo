@@ -55,3 +55,8 @@
     text-align: end;
 }
 
+a, a:link {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}

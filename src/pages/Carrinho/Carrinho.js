@@ -36,16 +36,18 @@ function Carrinho({basketProps, productQuantity, clearProduct})  {
 
     return (
       <Fragment key={index} >
-        <div className="product"><ion-icon onClick={() => clearProduct(product.tagName)} name="close-circle"></ion-icon><img src={productImages(product)}/>
-            <span className="sm-hide">{product.name}</span>
+        <div className="products-info">
+          <div className="product"><ion-icon onClick={() => clearProduct(product.tagName)} name="close-circle"></ion-icon><img src={productImages(product)}/>
+              <span className="sm-hide">{product.name}</span>
+          </div>
+          <div className="price sm-hide">R${product.price},00</div>
+          <div className="quantity">
+            <ion-icon onClick={() => productQuantity('decrease', product.tagName)} className="decrease" name="arrow-back-circle-outline"></ion-icon>
+              <span>{product.numbers}</span>
+              <ion-icon onClick={() => productQuantity('increase',  product.tagName)} className="increase" name="arrow-forward-circle-outline"></ion-icon>   
+          </div>
+          <div className="total">R${product.numbers * product.price},00</div>
         </div>
-        <div className="price sm-hide">R${product.price},00</div>
-        <div className="quantity">
-          <ion-icon onClick={() => productQuantity('decrease', product.tagName)} className="decrease" name="arrow-back-circle-outline"></ion-icon>
-            <span>{product.numbers}</span>
-           <ion-icon onClick={() => productQuantity('increase',  product.tagName)} className="increase" name="arrow-forward-circle-outline"></ion-icon>   
-        </div>
-        <div className="total">R${product.numbers * product.price},00</div>
       </Fragment>
     )
   
@@ -57,13 +59,13 @@ function Carrinho({basketProps, productQuantity, clearProduct})  {
           <h5 className="price sm-hide">PREÇO</h5>
           <h5 className="quantity">QUANTIDADE</h5>
           <h5 className="total">TOTAL</h5>
-      <div className="products">
-        { productsInCart }
-      </div>
-      <div className="basketTotalContainer">
-          <h4 classname="basketTotalTitle">Total no carrinho</h4>
-  <h4 className="basketTotal">{ basketProps.cartCost},00</h4>
-      </div>
+        <div className="products">
+          { productsInCart }
+        </div>
+        <div className="basketTotalContainer">
+            <h4 classname="basketTotalTitle">Total no carrinho</h4>
+            <h4 className="basketTotal">{ basketProps.cartCost},00</h4>
+        </div>
       </div>    
       
     )

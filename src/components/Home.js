@@ -18,21 +18,21 @@ const Home = (props) => {
     <div className="containerdocard">
         <div className="imagem">
             <img src={xioamiNote8} alt="Xioami Note 8"/>
-            <h3>Xioami Note 8 </h3>
+            <h3>Xiaomi Note 8 </h3>
             <h3>1000,00</h3>
             <a onClick={() =>props.addBasket('xiaomiNote8')} className="addCarrinho cart1" href="#">Adicionar ao Carrinho</a>
         </div>
  
         <div className="imagem">
             <img src={xioamiNote9} alt=""/>
-            <h3>Xioami Note 9 </h3>
+            <h3>Xiaomi Note 9 </h3>
             <h3>1100,00</h3>
             <a onClick={() =>props.addBasket('xiaomiNote9')} className="addCarrinho cart2" href="#">Adicionar ao Carrinho</a>
         </div>
 
         <div className="imagem">
             <img src={xioamiNote8} alt="Xioami Note 8"/>
-            <h3>Xioami Note 8 de novo </h3>
+            <h3>Xiaomi Note 8 de novo </h3>
             <h3>1000,00 </h3>
             <a onClick={() =>props.addBasket('xiaomiNote8denovo')} className="addCarrinho cart3" href="#">Adicionar ao Carrinho</a>
         </div>
